@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cifetech - Página Inicial</title>
+
+    <link rel="stylesheet" href="./CSS/styles-index.css" />
+
+    <script src="./JAVASCRIPT/scripts.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <header>
+
+        <div id="cifetech-logo">
+          <img src="./IMG/cifeteth-logo.png" alt="LOGO">
+        </div>
+
+        <div class="main-bar">
+
+          <div class="nav-bar">
+
+            <ul class="nav-list">
+              <li class="nav-item"><div class="divider"></div></li>
+              <li class="nav-item"><a href="./index.html"><b>PÁGINA
+                    INICIAL</b></a></li>
+              <li class="nav-item"><div class="divider"></div></li>
+              <li class="nav-item"><a href="./servico.html"><b>AGENDE SEU
+                    SERVIÇO</b></a></li>
+              <li class="nav-item"><div class="divider"></div></li>
+              <li class="nav-item"><a href="./trabalhe-conosco.html"><b>TRABALHE
+                    CONOSCO</b></a></li>
+              <li class="nav-item"><div class="divider"></div></li>
+              <li class="nav-item"><a href="./sobre.html"><b>SOBRE
+                    NÓS</b></a></li>
+              <li class="nav-item"><div class="divider"></div></li>
+            </ul>
+
+            <button class="nav-button" onclick="openNav()">
+              <i class="fa-solid fa-bars fa-2x"></i>
+            </button>
+
+            <div id="navbar-vertical" class="nav-list-vertical">
+              <a href="javascript:void(0)" class="closeNav"
+                onclick="closeNav()">&times;</a>
+
+              <div class="nav-list-menu">
+                <div id="nav-list-lines"></div>
+                <a class="nav-list-item" href="./index.html">PÁGINA INICIAL</a>
+                <div id="nav-list-lines"></div>
+                <a class="nav-list-item" href="./servico.html">AGENDE SEU
+                  SERVIÇO</a>
+                <div id="nav-list-lines"></div>
+                <a class="nav-list-item" href="./trabalhe-conosco.html">TRABALHE
+                  CONOSCO</a>
+                <div id="nav-list-lines"></div>
+                <a class="nav-list-item" href="./sobre.html">SOBRE NÓS</a>
+                <div id="nav-list-lines"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="search">
+
+            <form class="search-box" action="./PHP/pesquisa.php" method="post">
+              <input type="search" class="search-text" name="search-text"
+                placeholder="Pesquisar" required />
+              <button class="search-btn" type="submit">
+                <img src="./SVG/1Lupa.svg" alt="lupa" height="20" width="20" />
+              </button>
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <main id="OS">
+        <div class="OS-general">
+          <div class="OS-content">
+            <div class="OS-title">
+              <h1>OS:20240405-02</h1>
+              <span>05 Apr 2024</span>
+            </div>
+            <div class="OS-info">
+              <h3>Nome</h3>
+              <h3>CPF</h3>
+              <h3>Telefone</h3>
+            </div>
+            <div class="OS-body">
+              <h4>Conserto de placa-mãe</h4><br>
+              <div class="OS-details">
+                <div class="OS-text">
+                  <p>
+                    O cliente nos contatou as xxxxx horas inquirindo sobre seu
+                    computador ter desligado sozinho e não ter nenhuma resposta
+                    depois, uma verificação inicial por mensagens não resultou
+                    em
+                    nenhuma informação relevante ser revelada sendo necessario o
+                    cliente deixar seu equipamento nas mãos do técnico para um
+                    diagnóstico mais preciso no qual foi descoberto que a
+                    placa-mãe estava com uma falha de solda, a qual era possivel
+                    ser reparada.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="rodape">
+          <div class="sobre">
+            <h3>SOBRE NÓS</h3>
+            <p>Quem somos</p>
+            <p>Trabalhe conosco</p>
+            <p>Assistência Técnica</p>
+            <p>Serviços e Manutenções</p>
+          </div>
+
+          <div class="fale">
+            <h3>FALE CONOSCO</h3>
+            <p>Dúvidas Frequentes</p>
+            <p>(81)9 9999-9999</p>
+            <p>+55 (81)9 9999-9999</p>
+            <p>cifetech@gmail.com</p>
+          </div>
+
+          <div class="politica">
+            <h3>POLÍTICAS</h3>
+            <p>Política de Privacidade</p>
+            <p>Entrega</p>
+            <p>Garantia</p>
+            <p>Pagamento</p>
+          </div>
+
+          <div class="pagamento">
+            <div>
+              <h3>FORMAS DE PAGAMENTO</h3>
+            </div>
+
+            <div>
+              <img src="./IMG/Formas de pagamento.png" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+  </html>

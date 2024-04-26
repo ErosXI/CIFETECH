@@ -1,0 +1,943 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+:root {
+  --clr-primary-1: #02547d;
+  --clr-primary-2: #0284a8;
+  --clr-primary-3: #02bec4;
+  --clr-primary-4: #a9e8dc;
+  --clr-primary-5: #e1f7e7;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Inter", sans-serif;
+}
+
+/* PÁGINA INICIAL */
+
+/* HEADER */
+
+header {
+  top: 0;
+  z-index: 9;
+  background-color: var(--clr-primary-1);
+}
+
+header #cifetech-logo {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--clr-primary-1);
+}
+
+header #cifetech-logo img {
+  width: 100%;
+}
+
+header .main-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 1rem;
+}
+
+header .nav-bar .nav-list {
+  display: none;
+}
+
+header .nav-bar .nav-button {
+  border: none;
+  background-color: var(--clr-primary-1);
+  color: var(--clr-white);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+header .nav-bar .nav-button:hover {
+  color: var(--clr-primary-4);
+  transition: color 0.3s;
+}
+
+header .nav-bar .nav-list-vertical {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: var(--clr-primary-1);
+  z-index: 9;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+header .nav-bar .nav-list-vertical .nav-list-menu {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.75rem;
+  padding: 1rem;
+}
+
+header .nav-bar .nav-list-vertical .nav-list-menu #nav-list-lines {
+  background-color: var(--clr-white);
+  width: 90%;
+  height: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header .nav-bar .nav-list-vertical .nav-list-menu .nav-list-item {
+  color: var(--clr-white);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+header .nav-bar .nav-list-vertical .nav-list-menu .nav-list-item:hover,
+header .nav-bar .nav-list-vertical .nav-list-menu .nav-list-item:focus {
+  color: var(--clr-primary-3);
+}
+
+header .nav-bar .closeNav {
+  color: var(--clr-white);
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+@media screen and (max-height: 450px) {
+  header .nav-bar .nav-list-vertical a {
+    font-size: 20px;
+  }
+  header .nav-bar .closeNav {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+header .search .search-box {
+  background: var(--clr-white);
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .search .search-box .search-text {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: var(--clr-primary-1);
+  font-size: 20px;
+  line-height: 40px;
+  width: 0;
+  transition: 0.5s;
+}
+
+header .search .search-box .search-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--clr-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+header .search .search-box:hover > .search-text {
+  width: 200px;
+  padding: 0 6px;
+}
+
+header .search .search-box:hover > .search-btn {
+  background-color: var(--clr-white);
+}
+
+header .search .search-box:valid > .search-text {
+  width: 200px;
+  padding: 0 6px;
+}
+
+header .search .search-box:valid > .search-btn {
+  background-color: var(--clr-white);
+}
+
+/* MAIN */
+
+/* MAIN-1 */
+
+main .main-1 {
+  background-image: url("../IMG/cifetech-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding: 1rem;
+}
+
+main .main-1 .main-text {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+main .main-1 .main-text #text {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--clr-white);
+  text-shadow: 2px 0 var(--clr-black), -2px 0 var(--clr-black),
+    0 2px var(--clr-black), 0 -2px var(--clr-black), 2px 2px var(--clr-black),
+    -2px -2px var(--clr-black), 2px -2px var(--clr-black),
+    -2px 2px var(--clr-black);
+}
+
+main .main-1 .main-options .option-technician {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+main .main-1 .main-options .option-technician a,
+main .main-1 .main-options .option-technician button {
+  background-color: var(--clr-primary-1);
+  color: var(--clr-white);
+  width: 300px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .main-1 .main-options .option-technician button:hover {
+  background-color: var(--clr-primary-2);
+  transition: background-color 0.3s;
+}
+
+/* MAIN-2 */
+
+main .main-2 {
+  background-image: url("../IMG/main-background-2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: solid;
+  border-color: var(--clr-primary-1);
+  width: 100%;
+  padding: 1rem;
+}
+
+main .main-2 .main-2-a h4 {
+  color: var(--clr-primary-1);
+  text-align: center;
+  font-size: 24px;
+}
+
+main .main-2 .main-2-a .main-2-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .main-2 h2,
+main .main-2 p {
+  color: var(--clr-primary-1);
+  font-size: 20px;
+}
+
+main .main-2 .card {
+  background-color: var(--clr-primary-1);
+  color: var(--clr-white);
+  margin: 2rem;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+}
+
+main .main-2 .card .card-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+main .main-2 .card .card-1 .img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+}
+
+main .main-2 .card .card-1 .img-container img {
+  background-color: var(--clr-white);
+  color: var(--clr-primary-1);
+  background-position: center;
+}
+
+main .main-2 .card .card-1 .card-1-info .name {
+  color: var(--clr-white);
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+  max-width: fit-content;
+}
+
+main .main-2 .card .card-1 .card-1-info .checked {
+  color: gold;
+}
+
+main .main-2 .card .card-1 .card-1-info {
+  margin-right: auto;
+}
+
+main .main-2 .card .card-1 .img-container #photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+
+main .main-2 .card .card-2 {
+  font-size: 20px;
+  text-align: left;
+}
+
+main .main-2 .card .card-2 p {
+  padding-bottom: 0.75rem;
+  color: var(--clr-white);
+}
+
+main .main-2 .card .card-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+main .main-2 .card .card-3 #card-button {
+  background-color: var(--clr-white);
+  color: #02547d;
+  width: 150px;
+  height: 35px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+main .main-2 .card .card-3 #card-button:hover {
+  background-color: var(--clr-primary-5);
+  transition: background-color 0.3s;
+}
+
+main .main-2 .card .card-3 .left-button,
+main .main-2 .card .card-3 .right-button {
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--clr-white);
+}
+
+main .main-2 .card .card-3 .left-button:hover,
+main .main-2 .card .card-3 .right-button:hover {
+  color: var(--clr-primary-5);
+  transition: color 0.3s;
+}
+
+main .main-2 .main-2-b h4 {
+  color: var(--clr-primary-1);
+  text-align: center;
+  font-size: 24px;
+}
+
+main .main-2 .main-2-b #adress {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+main .main-2 .map-box {
+  width: 100%;
+  padding: 0 1rem 1rem;
+}
+
+main .main-2 .map-box iframe {
+  width: 100%;
+  height: 300px;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--clr-primary-1);
+  padding: 1rem;
+}
+
+footer .rodape {
+  color: var(--clr-white);
+}
+
+footer .rodape .sobre,
+footer .rodape .fale,
+footer .rodape .politica {
+  font-size: 20px;
+  padding-bottom: 1rem;
+}
+
+footer .rodape .sobre h3,
+footer .rodape .fale h3,
+footer .rodape .politica h3,
+footer .rodape .pagamento div {
+  padding-bottom: 0.75rem;
+}
+
+footer .rodape .pagamento div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .rodape .pagamento h3 {
+  font-size: 20px;
+  padding-bottom: 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .rodape .pagamento img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* MAIN */
+
+#page {
+  width: 100%;
+  background-image: url("../IMG/main-background-2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page .sobre {
+  color: var(--clr-primary-1);
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  border-radius: 20%;
+  margin-top: 5rem;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+#page .sobre .missao {
+  font-family: "Inter";
+  font-style: normal;
+  line-height: 1.6875rem;
+  background-color: var(--clr-primary-1);
+  color: var(--clr-white);
+  max-width: 1200px;
+  box-sizing: content-box;
+  border-radius: 1rem;
+  justify-content: center;
+}
+
+#page .sobre .missao .missao-title {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+#page .sobre .missao .missao-txt {
+  font-size: 25px;
+  font-weight: 350;
+  padding: 1rem;
+}
+
+#page .sobre .visao {
+  font-family: "Inter";
+  font-style: normal;
+  line-height: 1.6875rem;
+  background-color: var(--clr-primary-1);
+  color: var(--clr-white);
+  max-width: 1200px;
+  box-sizing: content-box;
+  border-radius: 1rem;
+}
+
+#page .sobre .visao .visao-title {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+#page .sobre .visao .visao-txt {
+  font-size: 25px;
+  font-weight: 350;
+  padding: 1rem;
+}
+
+#page .sobre .valores {
+  font-family: "Inter";
+  font-style: normal;
+  line-height: 1.6875rem;
+  background-color: var(--clr-primary-1);
+  color: var(--clr-white);
+  max-width: 1200px;
+  box-sizing: content-box;
+  border-radius: 1rem;
+}
+
+#page .sobre .valores .valores-title {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+#page .sobre .valores .valores-txt {
+  font-size: 25px;
+  font-weight: 350;
+  padding: 1rem;
+}
+
+/* TRABALHE CONOSCO */
+
+#trb-page {
+  width: 100%;
+  background-image: url("../IMG/main-background-2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#trb-page .trabalhe {
+  color: var(--clr-primary-1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20%;
+  margin-top: 5rem;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+#trb-page .trabalhe .porque {
+  font-family: "Inter";
+  font-style: normal;
+  line-height: 1.6875rem;
+  background-color: var(--clr-primary-1);
+  color: var(--clr-white);
+  max-width: 50rem;
+  box-sizing: content-box;
+  border-radius: 1rem;
+}
+
+#trb-page .trabalhe .porque .title {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+#trb-page .trabalhe .porque .txt {
+  font-size: 25px;
+  font-weight: 350;
+  padding: 1rem;
+}
+
+#trb-page .trabalhe .junte-se {
+  font-family: "Inter";
+  font-style: normal;
+  line-height: 1.6875rem;
+  background-color: var(--clr-primary-1);
+  color: var(--clr-white);
+  max-width: 1200px;
+  box-sizing: content-box;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#trb-page .trabalhe .junte-se .title {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 31px;
+  font-weight: 500;
+}
+
+#trb-page .trabalhe .junte-se .txt {
+  font-size: 25px;
+  font-weight: 350;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#trb-page .trabalhe .junte-se .txt .tech-name {
+  height: 2rem;
+}
+
+#trb-page .trabalhe .junte-se .txt .tech-end {
+  height: 2rem;
+}
+
+#trb-page .trabalhe .junte-se .txt .tech-cpf {
+  height: 2rem;
+}
+
+#trb-page .trabalhe .junte-se .txt .tech-nmb {
+  height: 2rem;
+}
+
+#trb-page .trabalhe .junte-se .txt .tech-spc {
+  height: 2rem;
+}
+
+#trb-page .trabalhe .junte-se .opcao {
+  height: 2rem;
+}
+
+#trb-page .trabalhe .junte-se .opcao:invalid {
+  color: gray;
+}
+
+#trb-page .trabalhe .junte-se .opcao option {
+  color: #000000;
+}
+
+#trb-page .trabalhe .junte-se .txt .tech-btn {
+  border: none;
+  background-color: var(--clr-primary-1);
+  color: var(--clr-white);
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  font-weight: 350;
+}
+
+#trb-page .trabalhe .junte-se .txt .tech-btn:hover {
+  color: var(--clr-primary-3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* OS */
+
+#OS {
+  width: 100%;
+  display: flex;
+  color: white;
+  background-color: #10334b;
+  padding: 1rem;
+}
+
+#OS .OS-general {
+  width: 100%;
+  display: flex;
+  box-sizing: content-box;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+#OS .OS-general .OS-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 3rem;
+}
+.card {
+  width: 475px;
+  height: 520px;
+  background-color: #f0f0f0;
+  margin: 15px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (min-width: 768px) {
+  /* HEADER */
+
+  header #cifetech-logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  header #cifetech-logo img {
+    width: 50%;
+  }
+
+  header .main-bar {
+    padding: 0 2rem 1rem;
+  }
+
+  header .search .search-box:hover > .search-text {
+    width: 240px;
+    padding: 0 6px;
+  }
+
+  header .search .search-box:valid > .search-text {
+    width: 240px;
+    padding: 0 6px;
+  }
+
+  /* MAIN */
+
+  /* MAIN-1 */
+
+  main .main-1 {
+    padding: 2rem;
+  }
+
+  main .main-1 .main-text {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  main .main-1 .main-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  /* MAIN-2 */
+
+  #OS .OS-general {
+    font-size: 30px;
+  }
+
+  main .main-2 .card {
+    width: 650px;
+    height: 400px;
+  }
+
+  main .main-2 .card .card-2 {
+    padding-bottom: 1.5rem;
+  }
+
+  main .main-2 .card .card-3 #card-button {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+  main .main-2 .card .card-3 .left-button,
+  main .main-2 .card .card-3 .right-button {
+    font-size: 40px;
+  }
+
+  main .main-2 .map-box {
+    padding: 0 2rem 2rem;
+  }
+
+  main .main-2 .map-box iframe {
+    height: 400px;
+  }
+
+  /* FOOTER */
+
+  footer {
+    padding: 2rem;
+  }
+
+  footer .rodape .sobre,
+  footer .rodape .fale,
+  footer .rodape .politica {
+    padding-bottom: 2rem;
+  }
+
+  footer .rodape .sobre h3,
+  footer .rodape .fale h3,
+  footer .rodape .politica h3,
+  footer .rodape .pagamento div {
+    padding-bottom: 1.5rem;
+  }
+
+  footer .rodape .pagamento h3 {
+    padding-bottom: 1.5rem;
+  }
+
+  footer .rodape .pagamento img {
+    max-width: 640px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* HEADER */
+
+  /* MAIN BAR */
+
+  header #cifetech-logo img {
+    width: 20%;
+  }
+
+  header .main-bar {
+    padding: 0 4rem 1rem;
+  }
+
+  header .main-bar .nav-bar .nav-list {
+    display: block flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  header .main-bar .nav-bar .nav-list .nav-item .divider {
+    background-color: var(--clr-white);
+    width: 2px;
+    height: 40px;
+  }
+
+  header .main-bar .nav-bar .nav-list .nav-item a {
+    color: var(--clr-white);
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  header .main-bar .nav-bar .nav-list .nav-item a:hover {
+    color: var(--clr-primary-4);
+    transition: olor 0.3s;
+  }
+
+  header .main-bar .nav-bar .nav-button,
+  header .main-bar .nav-bar .nav-list-vertical {
+    display: none;
+  }
+
+  header .search {
+    margin: 0 0 0.25rem;
+  }
+
+  header .search .search-box {
+    justify-content: none;
+  }
+
+  /* MAIN */
+
+  /* MAIN-1 */
+
+  main .main-1 {
+    padding: 4rem;
+  }
+
+  main .main-1 .main-text {
+    padding: 4rem 16rem 4rem 16rem;
+  }
+
+  main .main-1 .main-options .option-technician {
+    padding: 0rem 0 4rem 0;
+  }
+
+  /* MAIN-2 */
+
+  main .main-2 .card {
+    width: 650px;
+    height: 400px;
+  }
+
+  main .main-2 .card .card-2 {
+    padding-bottom: 1.5rem;
+  }
+
+  main .main-2 .card .card-3 #card-button {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+  main .main-2 .card .card-3 .left-button,
+  main .main-2 .card .card-3 .right-button {
+    font-size: 40px;
+  }
+
+  main .main-2 .map-box {
+    padding: 0 4rem 2rem;
+  }
+
+  main .main-2 .map-box iframe {
+    height: 450px;
+  }
+
+  /* TRABALHE CONOSCO */
+
+  #trb-page .trabalhe .porque .title {
+    font-size: 50px;
+  }
+
+  #trb-page .trabalhe .junte-se .title {
+    font-size: 40px;
+  }
+
+  /* FOOTER */
+
+  footer .rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    gap: 2rem;
+    padding: 2rem 4rem;
+  }
+}
